@@ -48,8 +48,7 @@
             </div>
             
             <div class="flex items-center gap-3">
-                <!-- Word RTF Downloader Button (Antipeluru) -->
-                <button onclick="downloadAsRtfDocument()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-4 rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all whitespace-nowrap">
+                <button onclick="downloadAsDocFile()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-4 rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all whitespace-nowrap">
                     📥 Unduh Word (Lengkap)
                 </button>
                 <div class="bg-slate-800 border border-slate-700 p-2 rounded-xl flex items-center gap-2">
@@ -87,7 +86,7 @@
                 </button>
             </div>
             <p class="text-[10px] text-slate-400 mt-2">
-                *Peringatan: Jika Anda menggunakan Generator AI, teks unduhan Word akan berubah sesuai dengan hasil generasi AI. Untuk mengunduh RPP asli Anda secara utuh, klik tombol "Unduh Word" sebelum menjalankan fitur ini.
+                *Mengklik tombol di atas akan menyusun ulang seluruh komponen modul ajar secara dinamis berdasarkan kurikulum merdeka dan pendekatan belajar mendalam!
             </p>
         </section>
 
@@ -96,7 +95,7 @@
             <button onclick="switchTab('ringkasan')" id="tab-ringkasan" class="pb-3 px-1 whitespace-nowrap tab-active transition-all text-xs md:text-sm">Ringkasan</button>
             <button onclick="switchTab('strategi')" id="tab-strategi" class="pb-3 px-1 whitespace-nowrap transition-all text-slate-500 text-xs md:text-sm">Strategi Lapangan</button>
             <button onclick="switchTab('alur')" id="tab-alur" class="pb-3 px-1 whitespace-nowrap transition-all text-slate-500 text-xs md:text-sm">Alur Belajar</button>
-            <button onclick="switchTab('penilaian')" id="tab-penilaian" class="pb-3 px-1 whitespace-nowrap transition-all text-slate-500 text-xs md:text-sm">Penilaian & Kalkulator</button>
+            <button onclick="switchTab('penilaian')" id="tab-penilaian" class="pb-3 px-1 whitespace-nowrap transition-all text-slate-500 text-xs md:text-sm">Asesmen & Kalkulator</button>
             <button onclick="switchTab('referensi')" id="tab-referensi" class="pb-3 px-1 whitespace-nowrap transition-all text-slate-500 text-xs md:text-sm">Glosarium</button>
             <button onclick="switchTab('ai')" id="tab-ai" class="pb-3 px-1 whitespace-nowrap transition-all text-amber-600 font-bold flex items-center gap-1 text-xs md:text-sm">Asisten Lapangan 🤖</button>
         </nav>
@@ -166,25 +165,126 @@
             </div>
         </section>
 
-        <!-- Tab: Alur Belajar -->
+        <!-- Tab: Alur Belajar (UPDATED & EXPANDED) -->
         <section id="content-alur" class="hidden space-y-6">
             <div class="glass-card p-6">
-                <h3 class="text-lg font-bold mb-4">Timeline Pembelajaran (70 Menit)</h3>
-                <div class="relative border-l-2 border-slate-200 ml-3 space-y-6">
-                    <div class="ml-6 relative">
-                        <span class="absolute -left-[31px] top-1 w-4 h-4 bg-slate-900 rounded-full border-4 border-white"></span>
-                        <h4 class="font-bold text-xs md:text-sm">A. Kegiatan Pendahuluan (15 Menit)</h4>
-                        <p id="timelineIntro" class="text-xs text-slate-600 mt-1 leading-relaxed">Orientasi & Doa. Presensi & Pengkondisian Fisik (berbaris melingkar). Apersepsi & Pertanyaan Pemantik (mencari denyut nadi awal). Pemanasan Dinamis Terbatas.</p>
+                <div class="flex items-center gap-3 mb-6 border-b pb-4">
+                    <span class="text-3xl">🧭</span>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800">Panduan Operasional Alur Pembelajaran</h3>
+                        <p class="text-xs text-slate-500">Tata cara guru memandu aktivitas 60 siswa di lapangan bulutangkis secara rinci berbasis Deep Learning.</p>
                     </div>
-                    <div class="ml-6 relative">
-                        <span class="absolute -left-[31px] top-1 w-4 h-4 bg-amber-500 rounded-full border-4 border-white"></span>
-                        <h4 class="font-bold text-xs md:text-sm">B. Kegiatan Inti (45 Menit)</h4>
-                        <p id="timelineCore" class="text-xs text-slate-600 mt-1 leading-relaxed">Tahap 1: Pengorganisasian Kelompok & Peran (5 Menit). Tahap 2: Simulasi dan Rotasi Peran (30 Menit - Ronde 1, 2, 3 berputar). Tahap 3: Diskusi Kelompok Kecil & Pengonseptualisasian (10 Menit).</p>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Pendahuluan -->
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                        <div class="flex items-center justify-between mb-3">
+                            <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wide flex items-center gap-2">
+                                <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">1</span>
+                                A. Kegiatan Pendahuluan (15 Menit) - Mindful & Connecting
+                            </h4>
+                            <span class="text-[10px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded">Fokus Koneksi & Fisik</span>
+                        </div>
+                        <div class="text-xs text-slate-700 space-y-3 pl-8 leading-relaxed">
+                            <p><strong>1. Orientasi & Doa:</strong> Guru membuka kelas dengan menyapa siswa secara hangat untuk membangun kedekatan emosional (Mindfulness). Salah satu siswa ditunjuk memimpin doa secara khidmat.</p>
+                            <p><strong>2. Presensi & Pengkondisian Ruang Sempit:</strong> 60 siswa berbaris rapi membentuk formasi melingkar besar mengelilingi garis luar lapangan bulutangkis (formasi luar). Formasi ini sangat krusial karena mengosongkan area dalam lapangan agar bisa digunakan untuk stasiun aktivitas fisik.</p>
+                            <p><strong>3. Apersepsi & Percobaan Nadi Awal (Resting HR):</strong> Guru meminta semua siswa menempelkan dua jari (telunjuk dan tengah) di pergelangan tangan kiri (arteri radialis) atau leher kanan (arteri karotis).</p>
+                            <div class="bg-white p-2.5 rounded border border-slate-200 font-mono text-[11px] text-slate-600">
+                                💡 <em>Instruksi Guru:</em> "Anak-anak, rasakan ketukan nadi kalian saat rileks. Mari kita hitung ketukannya selama 15 detik saat Bapak meniup peluit... Mulai!... Cukup. Sekarang kalikan 4 untuk mengetahui detak jantung per menit (BPM) kalian dalam kondisi istirahat. Catat hasil ini pada kolom 'Resting HR' di LKPD kelompok masing-masing."
+                            </div>
+                            <p><strong>4. Eksperimen Gerak Singkat:</strong> Guru mengajak seluruh siswa melompat-lompat santai di tempat sebanyak 10 kali, lalu langsung memandu mereka meraba kembali denyut nadi mereka.</p>
+                            <p><strong>5. Dialog Reflektif Awal:</strong> Guru melontarkan pertanyaan: <em>“Apakah ketukannya sekarang terasa lebih cepat? Mengapa denyutan nadi kalian berubah setelah melompat tadi? Apa yang sebenarnya sedang dilakukan oleh jantung kalian?”</em> Hal ini memicu rasa ingin tahu ilmiah siswa (Deep Learning).</p>
+                            <p><strong>6. Pemanasan Terarah:</strong> Melakukan gerakan peregangan statis dan dinamis di tempat baris masing-masing tanpa berpindah lokasi, guna menghindari benturan fisik di lapangan yang sempit.</p>
+                        </div>
                     </div>
-                    <div class="ml-6 relative">
-                        <span class="absolute -left-[31px] top-1 w-4 h-4 bg-emerald-500 rounded-full border-4 border-white"></span>
-                        <h4 class="font-bold text-xs md:text-sm">C. Kegiatan Penutup (10 Menit)</h4>
-                        <p id="timelineOutro" class="text-xs text-slate-600 mt-1 leading-relaxed">Pendinginan (Cooling Down), Refleksi Mendalam, Apresiasi & Umpan Balik Positif, Doa Penutup & Pembubaran.</p>
+
+                    <!-- Kegiatan Inti -->
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                        <div class="flex items-center justify-between mb-3">
+                            <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wide flex items-center gap-2">
+                                <span class="bg-amber-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">2</span>
+                                B. Kegiatan Inti (45 Menit) - Sintak Station Rotation & Cooperative Action
+                            </h4>
+                            <span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">Fokus Gerak & Analisis</span>
+                        </div>
+                        <div class="text-xs text-slate-700 space-y-3 pl-8 leading-relaxed">
+                            <p class="font-bold text-slate-900">Sintak 1: Pengorganisasian Kelompok & Pembagian Peran (5 Menit)</p>
+                            <p>Guru membagi 60 siswa ke dalam 6 kelompok (K1 - K6, masing-masing berisi 10 anak). Setiap kelompok menunjuk ketuanya dan menerima 1 Lembar Kerja Peserta Didik (LKPD) "Laboratorium Jantungku" serta alat tulis. Guru memberikan visualisasi dan menjelaskan aturan main **"Sirkuit Detak Jantung"** di lapangan bulutangkis yang dibagi menjadi 3 stasiun mini:</p>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li><strong>Stasiun 1 (Sisi Kiri):</strong> <em>Agility Shuttle-Run</em> bolak-balik jarak 5 meter secara intensif.</li>
+                                <li><strong>Stasiun 2 (Tengah):</strong> <em>Modified Strength Station</em> (Gerakan Squat dengan postur punggung tegak lurus secara periodik).</li>
+                                <li><strong>Stasiun 3 (Sisi Kanan):</strong> <em>Cardio Jump</em> (Gerakan melompat tali imajiner/bayangan secara konstan).</li>
+                            </ul>
+
+                            <p class="font-bold text-slate-900 mt-2">Sintak 2: Simulasi, Eksekusi Gerak, dan Rotasi Peran (30 Menit - Deep Learning Action)</p>
+                            <p>Guna menjamin keselamatan dan kelancaran sirkuit di lapangan sempit, guru memandu rotasi peran 6 kelompok dengan ketat sesuai tabel ronde di bawah:</p>
+                            
+                            <div class="overflow-x-auto my-2">
+                                <table class="w-full text-[11px] bg-white border border-slate-200 text-center">
+                                    <thead>
+                                        <tr class="bg-slate-100 font-bold">
+                                            <th class="p-2 border">Ronde Latihan</th>
+                                            <th class="p-2 border">Kelompok Aktif (Fisik)</th>
+                                            <th class="p-2 border">Kelompok Pendamping (Koreksi)</th>
+                                            <th class="p-2 border">Kelompok Analis (Data Nadi)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="p-2 border font-bold">Ronde 1 (8 Menit)</td>
+                                            <td class="p-2 border text-emerald-700 font-semibold">Kelompok 1 & 2 (Stasiun 1 & 2)</td>
+                                            <td class="p-2 border text-sky-700">Kelompok 3 & 4</td>
+                                            <td class="p-2 border text-amber-700">Kelompok 5 & 6</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-2 border font-bold">Ronde 2 (8 Menit)</td>
+                                            <td class="p-2 border text-emerald-700 font-semibold">Kelompok 3 & 4 (Stasiun 2 & 3)</td>
+                                            <td class="p-2 border text-sky-700">Kelompok 5 & 6</td>
+                                            <td class="p-2 border text-amber-700">Kelompok 1 & 2</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-2 border font-bold">Ronde 3 (8 Menit)</td>
+                                            <td class="p-2 border text-emerald-700 font-semibold">Kelompok 5 & 6 (Stasiun 3 & 1)</td>
+                                            <td class="p-2 border text-sky-700">Kelompok 1 & 2</td>
+                                            <td class="p-2 border text-amber-700">Kelompok 3 & 4</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="italic text-[10px] text-slate-500">*Sisa waktu 6 menit dalam sesi ini digunakan secara tertib untuk jeda transisi perpindahan posisi antar ronde.</p>
+
+                            <p class="font-bold text-slate-900 mt-2">Detil Pembagian Tugas Peran Lapangan:</p>
+                            <ul class="list-decimal pl-5 space-y-2">
+                                <li><strong>Kelompok Aktif (Pelaku):</strong> Bergerak aktif di stasiun masing-masing selama 1 menit intensitas sedang, beristirahat pasif selama 30 detik, dan diulang sebanyak 2 set. Mereka harus fokus pada teknik gerak yang aman.</li>
+                                <li><strong>Kelompok Pendamping (Peer-Coach):</strong> Berdiri di sepanjang batas stasiun luar. Bertugas mengawasi ruang gerak temannya agar tidak saling berbenturan, mengoreksi teknik gerakan secara sopan (misalnya mengingatkan posisi lutut tidak melebihi ujung kaki saat squat), serta menyemangati kelompok pelaku secara positif.</li>
+                                <li><strong>Kelompok Analis (Data Recorder):</strong> Berdiri membawa LKPD dan stopwatch. Mereka memandu waktu latihan. Begitu set aktivitas selesai, mereka langsung membantu meraba denyut nadi kelompok aktif selama 15 detik, mengalikan 4, lalu mencatat angka BPM pasca aktivitas tersebut di kolom 'Active HR' pada LKPD.</li>
+                            </ul>
+
+                            <p class="font-bold text-slate-900 mt-2">Sintak 3: Diskusi Kelompok & Pengonseptualisasian Data (10 Menit)</p>
+                            <p>Setelah seluruh ronde rotasi rampung, masing-masing kelompok berkumpul kembali di area steril luar lapangan. Mereka duduk melingkar kecil untuk menghitung selisih denyut nadi, mendiskusikan 3 pertanyaan kritis di dalam LKPD "Laboratorium Jantungku", serta menarik kesimpulan mengenai hubungan antara intensitas aktivitas fisik dengan frekuensi denyut jantung.</p>
+                        </div>
+                    </div>
+
+                    <!-- Penutup -->
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                        <div class="flex items-center justify-between mb-3">
+                            <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wide flex items-center gap-2">
+                                <span class="bg-emerald-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">3</span>
+                                C. Kegiatan Penutup (10 Menit) - Reflection & Joyful Closing
+                            </h4>
+                            <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">Fokus Refleksi & Apresiasi</span>
+                        </div>
+                        <div class="text-xs text-slate-700 space-y-3 pl-8 leading-relaxed">
+                            <p><strong>1. Pendinginan (Cooling Down):</strong> Guru memandu gerakan peregangan statis lambat dikombinasikan dengan pengaturan napas dalam. Semua siswa merapat kembali dalam formasi melingkar besar untuk menurunkan detak jantung secara bertahap kembali menuju batas aman (Resting rate).</p>
+                            <p><strong>2. Refleksi Mendalam (Deep Learning Reflection):</strong> Guru memicu diskusi kelas terbuka dengan melemparkan pertanyaan reflektif pasca olahraga:</p>
+                            <ul class="list-disc pl-5 space-y-1 italic text-slate-600">
+                                <li>"Anak-anak, lapangan kita sangat sempit dan jumlah kalian ada 60 anak. Mengapa hari ini tidak ada satu pun dari kalian yang bertabrakan atau cedera?"</li>
+                                <li>"Siapa yang selisih denyut nadinya tadi tembus di atas 50 ketukan setelah berolahraga? Apa yang kalian rasakan di bagian dada dan napas? Mengapa peningkatan ketukan ini justru menjadi tanda bahwa jantung kalian sehat?"</li>
+                            </ul>
+                            <p><strong>3. Apresiasi Sosial & Umpan Balik:</strong> Guru memberikan apresiasi verbal yang tinggi atas disiplin, kejujuran pencatatan data nadi kelompok, serta empati keselamatan bersama (Gotong Royong) yang ditunjukkan 60 siswa sepanjang sirkuit.</p>
+                            <p><strong>4. Doa Penutup & Pembubaran:</strong> Menutup pelajaran dengan doa bersama, merapikan kembali peralatan, dan berjabat tangan tertib sebelum kembali ke ruang kelas masing-masing.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -214,7 +314,7 @@
                             </tr>
                             <tr class="bg-slate-50 border-b">
                                 <td id="rubrikAspek2" class="p-3 border-r font-semibold text-slate-800">Teknik Gerak Aman</td>
-                                <td id="rubrikS4Aspek2" class="p-3 border-r text-slate-600">Melakukan seluruh gerakan dengan teknik postur tubuh tegak, pendaratan kaki lembut, menjaga keseimbangan, dan tidak berisiko cedera.</td>
+                                <td id="rubrikS4Aspek2" class="p-3 border-r text-slate-600">Melakukan seluruh gerakan dengan teknik postur tubuh tegak, pendaratan kaki lembut, menjaga keseimbangan, and tidak berisiko cedera.</td>
                                 <td id="rubrikS3Aspek2" class="p-3 border-r text-slate-600">Melakukan gerakan dengan teknik yang benar, namun sesekali kehilangan keseimbangan saat melakukan rotasi cepat.</td>
                                 <td id="rubrikS1Aspek2" class="p-3 text-slate-600">Gerakan tidak sesuai instruksi teknik dasar dan membahayakan keselamatan diri sendiri atau orang lain.</td>
                             </tr>
@@ -410,7 +510,7 @@
                         </div>
                     </div>
 
-                    <button onclick="generateAdaptationPlan()" class="w-full bg-slate-900 text-amber-500 hover:bg-slate-800 font-bold py-2 px-4 rounded-lg text-xs flex items-center justify-center gap-2">
+                    <button onclick="generateAdjustmentPlan()" class="w-full bg-slate-900 text-amber-500 hover:bg-slate-800 font-bold py-2 px-4 rounded-lg text-xs flex items-center justify-center gap-2">
                         <span>Susun Adaptasi Darurat AI</span>
                         <div id="adaptationSpinner" class="spinner hidden"></div>
                     </button>
@@ -504,12 +604,14 @@
             materi: "Menjaga Kebugaran Jasmani",
             subMateri: "Daya Tahan Jantung-Paru dan Kekuatan",
             faseKelas: "Fase C / Kelas V (Lima)",
+            tahunPenyusunan: "2026",
+            cpText: "Peserta didik menganalisis dan mempraktikkan aktivitas kebugaran jasmani terkait kesehatan (daya tahan, kekuatan, kelenturan, dan komposisi tubuh) dan melakukan pengukuran kebugaran jasmani secara sederhana secara mandiri serta kolaboratif.",
             tujuanPembelajaran: "Melalui model pembelajaran Station Rotation berbasis Deep Learning, peserta didik dapat mempraktikkan latihan daya tahan dan kekuatan otot secara aman dalam ruang terbatas secara bergantian, menganalisis hubungan antara intensitas aktivitas fisik dengan frekuensi denyut nadi secara kritis, serta menunjukkan sikap gotong royong dan mandiri dalam mengelola aktivitas kelompok.",
             kktp1: "KKTP 1 (Praktik Gerak): Peserta didik mampu memperagakan variasi gerak daya tahan dan kekuatan (shuttle-run, squat, dan lompat bayangan) dengan teknik yang aman di ruang terbatas.",
             kktp2: "KKTP 2 (Analisis Kognitif): Peserta didik mampu menghitung denyut nadi secara manual dan menjelaskan minimal 2 alasan mengapa aktivitas fisik memengaruhi kecepatan detak jantung berdasarkan hasil diskusi kelompok.",
             kktp3: "KKTP 3 (Karakter): Peserta didik secara konsisten membagikan peran secara adil dan menunjukkan empati terhadap keselamatan teman satu kelompoknya selama latihan berlangsung.",
             timelineIntro: "1. Orientasi & Doa: Guru menyapa siswa dengan ramah dan membangun kedekatan emosional. Berdoa bersama dipimpin salah satu siswa. 2. Presensi & Pengkondisian Fisik: Siswa berbaris rapi dalam formasi melingkar mengelilingi garis luar lapangan bulutangkis (formasi luar) untuk menghemat ruang tengah. 3. Apersepsi & Pertanyaan Pemantik (Deep Learning - Dialog): Guru meminta semua siswa menempelkan dua jari di pergelangan tangan kiri atau leher kanan mencari denyut nadi awal (resting heart rate). 4. Pemanasan Dinamis Terbatas: Melakukan peregangan statis dan dinamis di tempat masing-masing tanpa berpindah lokasi guna menghindari benturan fisik.",
-            timelineCore: "Tahap 1: Pengorganisasian Kelompok & Peran (5 Menit). Guru membagi siswa ke dalam 6 kelompok (masing-masing 10 siswa). Setiap kelompok menerima LKPD \"Laboratorium Jantungku\" dan pensil. Guru menjelaskan aturan main \"Sirkuit Detak Jantung\". Tahap 2: Simulasi dan Rotasi Peran (30 Menit - Deep Learning Action). Ronde 1, Ronde 2, dan Ronde 3 secara bergantian. Tahap 3: Diskusi Kelompok Kecil & Pengonseptualisasian (10 Menit). Setelah semua merasakan semua peran, masing-masing kelompok berkumpul di area steril luar lapangan (duduk melingkar kecil) untuk mendiskusikan hasil LKPD mereka.",
+            timelineCore: "Tahap 1: Pengorganisasian Kelompok & Peran (5 Menit). Guru membagi siswa ke dalam 6 kelompok (masing-masing 10 siswa). Setiap kelompok menerima LKPD \"Laboratorium Jantungku\" dan pencatat. Guru menjelaskan aturan main \"Sirkuit Detak Jantung\". Tahap 2: Simulasi dan Rotasi Peran (30 Menit - Deep Learning Action). Ronde 1, Ronde 2, dan Ronde 3 secara bergantian. Tahap 3: Diskusi Kelompok Kecil & Pengonseptualisasian (10 Menit). Setelah semua merasakan semua peran, masing-masing kelompok berkumpul di area steril luar lapangan (duduk melingkar kecil) untuk mendiskusikan hasil LKPD mereka.",
             timelineOutro: "1. Pendinginan (Cooling Down): Dipimpin oleh guru, melakukan gerakan peregangan lambat dengan pengaturan napas yang dalam. Semua siswa berbaris kembali melingkar. 2. Refleksi Mendalam (Deep Learning Reflection): Tanya jawab mengenai aktivitas yang paling menantang dan hubungannya dengan kesehatan jantung. 3. Apresiasi & Umpan Balik Positif: Guru mengapresiasi kerja sama luar biasa dari 60 siswa. 4. Doa Penutup & Pembubaran: Berdoa bersama dan berjabat tangan tertib sebelum kembali ke kelas.",
             strategiLapanganDesc: "Siswa dibagi menjadi 6 Kelompok (Kelompok 1 sampai 6) masing-masing berisi 10 siswa. Pada satu waktu, hanya ada 2 kelompok yang bergerak aktif secara fisik di lapangan, sementara kelompok lain bertindak sebagai pengamat, pencatat data fisik (data recorder), dan penganalisis gerakan (peer-coach).",
             zona1Task: "Kelompok Aktif: Melakukan aktivitas fisik di stasiun masing-masing selama 1 menit intensitas sedang, istirahat 30 detik, diulang sebanyak 2 set.",
@@ -764,6 +866,7 @@
             {
                 "materi": "Nama Materi Utama",
                 "subMateri": "Sub-fokus Gerak",
+                "cpText": "Bunyi Capaian Pembelajaran Fase C Kurikulum Merdeka Terkait Materi Baru Ini",
                 "tujuanPembelajaran": "Tujuan Pembelajaran Gabungan Sikap, Pengetahuan, dan Keterampilan secara integratif (1 kalimat panjang)",
                 "kktp1": "Praktik Gerak Aman (KKTP Kinerja)",
                 "kktp2": "Analisis Kognitif (KKTP Pengetahuan)",
@@ -895,7 +998,7 @@
         }
 
         // AI Feature: Adaptasi Skenario Darurat
-        async function generateAdaptationPlan() {
+        async function generateAdjustmentPlan() {
             const scenario = document.getElementById('adaptationScenario').value;
             const spinner = document.getElementById('adaptationSpinner');
             spinner.classList.remove('hidden');
@@ -1026,172 +1129,404 @@
         }
 
         // ==========================================
-        //  ANTIPELURU RICH TEXT FORMAT (RTF) EXPORTER - FULL UN-SUMMARIZED CONTENT
+        //  COMPLIANT MS WORD XML-HTML EXPORTER
         // ==========================================
-        function downloadAsRtfDocument() {
-            function encodeToRtfUnicode(str) {
-                if (!str) return "";
-                return str.replace(/[^\x00-\x7F]/g, function(c) {
-                    return "\\u" + c.charCodeAt(0) + "?";
-                });
-            }
+        function downloadAsDocFile() {
+            // Generate standard Glossary HTML string
+            let glossaryDocHtml = "";
+            appData.glossary.forEach(item => {
+                glossaryDocHtml += `
+                <p style="margin: 0; padding-top: 6px;"><b>- ${item.term}</b></p>
+                <p style="margin: 0; padding-bottom: 6px; padding-left: 12px; font-style: italic; color: #555;">${item.desc}</p>`;
+            });
 
-            // FULL, EXACT CONTENT from the user's prompt hardcoded to prevent any AI summarization.
-            // When user clicks download, they get exactly what they pasted.
-            let rtfContent = `{\\rtf1\\ansi\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
-{\\colortbl ;\\red0\\green0\\blue0;}
-\\paperw11906\\paperh16838\\margl1440\\margr1440\\margt1440\\margb1440
-\\f0\\fs22
+            // Standard Word Document Layout with KOP SDN 8 Banjar Anyar and correct MS XML Schema
+            // This XML block forces MS Word (desktop and mobile) to render correctly and bypass protection warnings.
+            const sourceHTML = `
+            <html xmlns:o="urn:schemas-microsoft-com:office:office" 
+                  xmlns:w="urn:schemas-microsoft-com:office:word" 
+                  xmlns="http://www.w3.org/TR/REC-html40">
+            <head>
+                <meta charset="utf-8">
+                <title>Modul Ajar PJOK - Kurikulum Merdeka</title>
+                <!--[if gte mso 9]>
+                <xml>
+                    <w:WordDocument>
+                        <w:View>Print</w:View>
+                        <w:Zoom>100</w:Zoom>
+                        <w:DoNotOptimizeForBrowser/>
+                    </w:WordDocument>
+                </xml>
+                <![endif]-->
+                <style>
+                    body { font-family: 'Arial', 'Calibri', sans-serif; line-height: 1.5; color: #000000; font-size: 11pt; margin: 1in; }
+                    h1 { font-size: 16pt; font-weight: bold; text-align: center; margin-bottom: 3px; }
+                    h2 { font-size: 13pt; font-weight: bold; border-bottom: 2px solid #000; padding-bottom: 3px; margin-top: 20px; margin-bottom: 10px; }
+                    h3 { font-size: 11pt; font-weight: bold; margin-top: 15px; margin-bottom: 5px; text-decoration: underline; }
+                    p, li { font-size: 11pt; margin-top: 4px; margin-bottom: 4px; }
+                    table { border-collapse: collapse; width: 100%; margin-top: 10px; margin-bottom: 10px; }
+                    th, td { border: 1px solid #000000; padding: 6px 10px; font-size: 10pt; text-align: left; }
+                    th { background-color: #f2f2f2; font-weight: bold; }
+                    .kop-container { text-align: center; margin-bottom: 20px; line-height: 1.2; }
+                    .kop-line { border-bottom: 4px double #000; padding-bottom: 4px; margin-bottom: 20px; }
+                    .page-break { page-break-before: always; }
+                    .meta-table td { border: none; padding: 3px; font-size: 11pt; }
+                </style>
+            </head>
+            <body>
 
-{\\qc \\fs28\\b MODUL AJAR (RPP) KURIKULUM MERDEKA PJOK \\b0 \\line}
-{\\qc \\fs24\\b AKTIVITAS KEBUGARAN JASMANI (PENDIDIKAN MENDALAM / DEEP LEARNING) \\b0 \\line\\line}
+                <!-- KOP SURAT RESMI DINAS -->
+                <div class="kop-container">
+                    <p style="font-size: 13pt; font-weight: bold; margin: 0;">PEMERINTAH KABUPATEN TABANAN</p>
+                    <p style="font-size: 13pt; font-weight: bold; margin: 0;">DINAS PENDIDIKAN, KEPEMUDAAN DAN OLAHRAGA</p>
+                    <p style="font-size: 14pt; font-weight: bold; margin: 3px 0;">SD NEGERI 8 BANJAR ANYAR</p>
+                    <p style="font-size: 9pt; font-style: italic; margin: 0; color: #444;">Alamat: Jl. Dr. Ir. Soekarno, Banjar Anyar, Kediri, Tabanan, Bali, Kode Pos 82121</p>
+                </div>
+                <div class="kop-line"></div>
 
-{\\fs24\\b I. INFORMASI UMUM \\b0 \\line}
-Nama Penyusun: Gede Ardy Putrawan, S.Pd. \\line
-Instansi: SD Negeri 8 Banjar Anyar \\line
-Tahun Penyusunan: 2026 \\line
-Jenjang Sekolah: Sekolah Dasar (SD) \\line
-Fase / Kelas: Fase C / Kelas V (Lima) \\line
-Mata Pelajaran: Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK) \\line
-Materi Pokok: Menjaga Kebugaran Jasmani (Daya Tahan Jantung-Paru dan Kekuatan) \\line
-Alokasi Waktu: (1 Pertemuan) \\line
-Jumlah Peserta Didik: 60 Siswa \\line
-Moda Pembelajaran: Tatap Muka (Luring) \\line
-Target Peserta Didik: Peserta didik reguler/tipikal (tidak ada kesulitan dalam mencerna materi ajar). \\line
-Model Pembelajaran: Project-Based Cooperative Learning & Station Rotation berbasis Deep Learning (Mengalami, Merefleksikan, Mengonseptualisasikan). \\line\\line
+                <h1>MODUL AJAR KURIKULUM MERDEKA (RPP LENGKAP)</h1>
+                <p style="text-align: center; font-style: italic; margin-bottom: 20px;">Sistem Modifikasi Pembelajaran Praktis 3-Zona Lapangan Sempit berbasis Deep Learning</p>
 
-{\\fs24\\b II. KOMPONEN INTI \\b0 \\line}
-{\\b A. Kompetensi Awal (Prasyarat) \\b0 \\line}
-Sebelum memulai pembelajaran ini, peserta didik idealnya sudah memahami konsep dasar bahwa aktivitas fisik dapat membuat tubuh lelah dan detak jantung meningkat, serta mampu melakukan gerakan motorik dasar (melompat, berlari, dan menekuk lutut) secara mandiri. \\line\\line
+                <!-- 1. IDENTIFIKASI -->
+                <h2>1. IDENTIFIKASI</h2>
+                <table class="meta-table" style="width: 100%; margin-bottom: 15px;">
+                    <tr>
+                        <td style="width: 30%;"><b>Nama Penyusun</b></td>
+                        <td style="width: 5%;">:</td>
+                        <td>Gede Ardy Putrawan, S.Pd.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Instansi Sekolah</b></td>
+                        <td>:</td>
+                        <td>SD Negeri 8 Banjar Anyar</td>
+                    </tr>
+                    <tr>
+                        <td><b>Tahun Penyusunan</b></td>
+                        <td>:</td>
+                        <td>${appData.tahunPenyusunan}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Jenjang Sekolah</b></td>
+                        <td>:</td>
+                        <td>Sekolah Dasar (SD)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Fase / Kelas / Semester</b></td>
+                        <td>:</td>
+                        <td>${appData.faseKelas} / Ganjil</td>
+                    </tr>
+                    <tr>
+                        <td><b>Mata Pelajaran</b></td>
+                        <td>:</td>
+                        <td>Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Materi Pokok</b></td>
+                        <td>:</td>
+                        <td>${appData.materi}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Sub-Materi</b></td>
+                        <td>:</td>
+                        <td>${appData.subMateri}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Alokasi Waktu</b></td>
+                        <td>:</td>
+                        <td>1 Pertemuan (70 Menit)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Jumlah Peserta Didik</b></td>
+                        <td>:</td>
+                        <td>60 Siswa</td>
+                    </tr>
+                    <tr>
+                        <td><b>Moda Pembelajaran</b></td>
+                        <td>:</td>
+                        <td>Tatap Muka (Luring)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Target Peserta Didik</b></td>
+                        <td>:</td>
+                        <td>Peserta didik reguler/tipikal (tidak ada kesulitan dalam mencerna materi ajar)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Model Pembelajaran</b></td>
+                        <td>:</td>
+                        <td>Project-Based Cooperative Learning & Station Rotation berbasis Deep Learning (Mengalami, Merefleksikan, Mengonseptualisasikan)</td>
+                    </tr>
+                </table>
 
-{\\b B. Sarana & Prasarana \\b0 \\line}
-1. Lapangan Bulutangkis: Ukuran standar (Rasio ruang: padat untuk 60 siswa). \\line
-2. Peralatan: \\line
-- Stopwatch / Handphone guru & siswa (6 buah). \\line
-- Peluit untuk komando guru. \\line
-- LKPD Kebugaran "Laboratorium Jantungku" (6 lembar) & alat tulis. \\line
-- Penanda stasiun (Cone/kertas penanda stasiun 1, 2, dan 3). \\line\\line
+                <!-- 2. DESAIN PEMBELAJARAN -->
+                <h2>2. DESAIN PEMBELAJARAN</h2>
+                
+                <h3>A. Capaian Pembelajaran (CP)</h3>
+                <p>${appData.cpText}</p>
 
-{\\b C. Profil Pelajar Pancasila \\b0 \\line}
-1. Gotong Royong: Berkolaborasi dalam kelompok, berbagi peran (pelaku, pencatat, pengawas keselamatan), dan saling mendukung selama aktivitas. \\line
-2. Mandiri: Bertanggung jawab memantau kondisi fisik diri sendiri, jujur dalam mencatat data detak jantung, serta berupaya melakukan gerakan dengan teknik yang benar. \\line\\line
+                <h3>B. Tujuan Pembelajaran (TP)</h3>
+                <p>${appData.tujuanPembelajaran}</p>
 
-{\\b D. Tujuan Pembelajaran (Integratif) \\b0 \\line}
-Melalui model pembelajaran Station Rotation berbasis Deep Learning, peserta didik dapat mempraktikkan latihan daya tahan dan kekuatan otot secara aman dalam ruang terbatas secara bergantian, menganalisis hubungan antara intensitas aktivitas fisik dengan frekuensi denyut nadi secara kritis, serta menunjukkan sikap gotong royong dan mandiri dalam mengelola aktivitas kelompok. \\line\\line
+                <h3>C. Kriteria Ketercapaian Tujuan Pembelajaran (KKTP)</h3>
+                <ul>
+                    <li><b>KKTP 1 (Praktik Gerak):</b> ${appData.kktp1}</li>
+                    <li><b>KKTP 2 (Analisis Kognitif):</b> ${appData.kktp2}</li>
+                    <li><b>KKTP 3 (Karakter):</b> ${appData.kktp3}</li>
+                </ul>
 
-{\\b E. Kriteria Ketercapaian Tujuan Pembelajaran (KKTP) \\b0 \\line}
-1. KKTP 1 (Praktik Gerak): Peserta didik mampu memperagakan variasi gerak daya tahan dan kekuatan (shuttle-run, squat, dan lompat bayangan) dengan teknik yang aman di ruang terbatas. \\line
-2. KKTP 2 (Analisis Kognitif): Peserta didik mampu menghitung denyut nadi secara manual dan menjelaskan minimal 2 alasan mengapa aktivitas fisik memengaruhi kecepatan detak jantung berdasarkan hasil diskusi kelompok. \\line
-3. KKTP 3 (Karakter): Peserta didik secara konsisten membagikan peran secara adil dan menunjukkan empati terhadap keselamatan teman satu kelompoknya selama latihan berlangsung. \\line\\line
+                <h3>D. Kompetensi Awal (Prasyarat)</h3>
+                <p>Sebelum memulai pembelajaran ini, peserta didik idealnya sudah memahami konsep dasar bahwa aktivitas fisik dapat membuat tubuh lelah dan detak jantung meningkat, serta mampu melakukan gerakan motorik dasar (melompat, berlari, dan menekuk lutut) secara mandiri.</p>
 
-{\\b F. Pemahaman Bermakna (Deep Learning Concept) \\b0 \\line}
-Bukan Sekadar Lelah, tetapi Paham: Tubuh kita adalah sistem yang terintegrasi. Saat kita bergerak aktif, otot membutuhkan lebih banyak oksigen. Jantung merespons dengan memompa darah lebih cepat (ditandai dengan meningkatnya denyut nadi). \\line
-Aplikasi Nyata: Peserta didik memahami bahwa memiliki jantung yang bugar membuat mereka tidak mudah lelah saat belajar di kelas, bersepeda ke sekolah, atau membantu orang tua di rumah. \\line\\line
+                <h3>E. Pemahaman Bermakna (Deep Learning Concept)</h3>
+                <ul>
+                    <li><b>Bukan Sekadar Lelah, tetapi Paham:</b> Tubuh kita adalah sistem yang terintegrasi. Saat kita bergerak aktif, otot membutuhkan lebih banyak oksigen. Jantung merespons dengan memompa darah lebih cepat (ditandai dengan meningkatnya denyut nadi).</li>
+                    <li><b>Aplikasi Nyata:</b> Peserta didik memahami bahwa memiliki jantung yang bugar membuat mereka tidak mudah lelah saat belajar di kelas, bersepeda ke sekolah, atau membantu orang tua di rumah.</li>
+                </ul>
 
-{\\b G. Pertanyaan Pemantik \\b0 \\line}
-1. "Mengapa saat kita berlari kencang, dada kita terasa berdetak sangat cepat dan napas kita menjadi terengah-engah?" \\line
-2. "Bagaimana cara kita membuktikan bahwa jantung kita bekerja lebih keras saat kita berolahraga tanpa harus menggunakan mesin medis yang rumit?" \\line\\line
+                <h3>F. Pertanyaan Pemantik</h3>
+                <ol>
+                    <li>"Mengapa saat kita berlari kencang, dada kita terasa berdetak sangat cepat dan napas kita menjadi terengah-engah?"</li>
+                    <li>"Bagaimana cara kita membuktikan bahwa jantung kita bekerja lebih keras saat kita berolahraga tanpa harus menggunakan mesin medis yang rumit?"</li>
+                </ol>
 
-{\\fs24\\b III. TANTANGAN LAPANGAN & SOLUSI TAKTIKAL \\b0 \\line}
-Dimensi Lapangan: Lapangan Bulutangkis \\line
-Rasio Ruang: Sangat padat jika 60 siswa bergerak bersamaan. \\line
-Strategi Manajemen Kelas (The "Three-Zone" Rotation): \\line
-Siswa dibagi menjadi 6 Kelompok (Kelompok 1 sampai 6) masing-masing berisi 10 siswa. Pada satu waktu, hanya ada 2 kelompok yang bergerak aktif secara fisik di lapangan, sementara kelompok lain bertindak sebagai pengamat, pencatat data fisik (data recorder), dan penganalisis gerakan (peer-coach). \\line\\line
+                <div class="page-break"></div>
 
-{\\fs24\\b IV. KEGIATAN PEMBELAJARAN (70 MENIT) \\b0 \\line}
-{\\b A. Kegiatan Pendahuluan (15 Menit) - Mindful & Connecting \\b0 \\line}
-1. Orientasi & Doa: Guru menyapa siswa dengan ramah dan membangun kedekatan emosional. Berdoa bersama dipimpin salah satu siswa. \\line
-2. Presensi & Pengkondisian Fisik: Siswa berbaris rapi dalam formasi melingkar mengelilingi garis luar lapangan bulutangkis (formasi luar) untuk menghemat ruang tengah. \\line
-3. Apersepsi & Pertanyaan Pemantik (Deep Learning - Dialog): \\line
-- Guru meminta semua siswa menempelkan dua jari di pergelangan tangan kiri atau leher kanan mencari denyut nadi awal (resting heart rate). \\line
-- "Rasakan ketukannya. Apakah lambat atau cepat? Sekarang mari kita lompat di tempat 10 kali secara perlahan." \\line
-- "Rasakan lagi nadinya. Apakah ada perubahan? Mengapa itu terjadi?" \\line
-4. Pemanasan Dinamis Terbatas: Melakukan peregangan statis dan dinamis di tempat masing-masing tanpa berpindah lokasi guna menghindari benturan fisik. \\line\\line
+                <!-- 3. SARANA DAN PRASARANA -->
+                <h2>3. SARANA DAN PRASARANA</h2>
+                <ol>
+                    <li><b>Lapangan Bulutangkis:</b> Ukuran standar (Rasio ruang padat untuk 60 siswa sehingga butuh rotasi cerdas).</li>
+                    <li><b>Peralatan Pendukung:</b>
+                        <ul>
+                            <li>Stopwatch / Handphone guru & siswa (6 buah).</li>
+                            <li>Peluit untuk komando guru.</li>
+                            <li>LKPD Kebugaran "Laboratorium Jantungku" (6 lembar) & alat tulis.</li>
+                            <li>Penanda stasiun (Cone/kertas penanda stasiun 1, 2, dan 3).</li>
+                        </ul>
+                    </li>
+                </ol>
 
-{\\b B. Kegiatan Inti (45 Menit) - Meaningful, Active & Cooperative \\b0 \\line}
-Tahap 1: Pengorganisasian Kelompok & Peran (5 Menit) \\line
-- Guru membagi siswa ke dalam 6 kelompok (masing-masing 10 siswa). \\line
-- Setiap kelompok menerima LKPD "Laboratorium Jantungku" dan pensil. \\line
-- Guru menjelaskan aturan main "Sirkuit Detak Jantung" di lapangan bulutangkis yang dibagi menjadi 3 stasiun mini: \\line
-  * Stasiun 1 (Sisi Kiri): Agility Shuttle-Run pendek (jarak 5 meter bolak-balik). \\line
-  * Stasiun 2 (Tengah): Modified Strength Station (Squat atau push-up dinding/lutut secara periodik). \\line
-  * Stasiun 3 (Sisi Kanan): Cardio Jump (Melompat tali tanpa tali / lompat bayangan cepat). \\line\\line
+                <!-- 4. PENGALAMAN BELAJAR (LENGKAP DAN DETAIL) -->
+                <h2>4. PENGALAMAN BELAJAR LENGKAP</h2>
+                <p><i><b>Prinsip Keselamatan Lapangan Sempit:</b> Kelas dibagi menjadi 6 Kelompok Besar (Kelompok 1 sampai 6 @10 anak). Zona Gerak Aktif ditempatkan di dalam lapangan utama, sedangkan Zona Pendukung dan Analis ditempatkan di luar garis lapangan bulutangkis untuk menjaga jarak aman.</i></p>
+                
+                <table style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">Zona Peran</th>
+                            <th>Uraian Tugas Spesifik Pembelajaran</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>Zona 1: Gerak Aktif</b></td>
+                            <td>${appData.zona1Task}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Zona 2: Pendamping</b></td>
+                            <td>${appData.zona2Task}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Zona 3: Analis Nadi</b></td>
+                            <td>${appData.zona3Task}</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-Tahap 2: Simulasi dan Rotasi Peran (30 Menit - Deep Learning Action) \\line
-Siklus perputaran kelompok dirancang agar ruang lapangan bulutangkis tetap longgar dan kondusif: \\line
-- Ronde 1 (8 Menit): Kelompok 1 & 2 (Stasiun 1 & 2 aktif). Kelompok 3 & 4 (Pendamping). Kelompok 5 & 6 (Analis). \\line
-- Ronde 2 (8 Menit): Kelompok 3 & 4 (Stasiun 2 & 3 aktif). Kelompok 5 & 6 (Pendamping). Kelompok 1 & 2 (Analis). \\line
-- Ronde 3 (8 Menit): Kelompok 5 & 6 (Stasiun 3 & 1 aktif). Kelompok 1 & 2 (Pendamping). Kelompok 3 & 4 (Analis). \\line
-(Sisa waktu 6 menit digunakan untuk transisi perpindahan kelompok secara tertib). \\line\\line
+                <h3>A. Kegiatan Pendahuluan (15 Menit) - Mindful & Connecting</h3>
+                <p><b>1. Orientasi & Doa:</b> Guru menyapa siswa dengan ramah dan membangun kedekatan emosional (Mindfulness). Salah satu siswa memimpin doa bersama secara khidmat.</p>
+                <p><b>2. Presensi & Pengkondisian Ruang Sempit:</b> 60 siswa berbaris rapi membentuk formasi melingkar besar mengelilingi garis luar lapangan bulutangkis (formasi luar). Formasi ini mengosongkan area dalam lapangan agar bisa digunakan untuk stasiun aktivitas fisik.</p>
+                <p><b>3. Apersepsi & Percobaan Nadi Awal (Resting HR):</b> Guru meminta semua siswa menempelkan dua jari di pergelangan tangan kiri (arteri radialis) atau leher kanan (arteri karotis). Guru meniup peluit memandu perhitungan nadi selama 15 detik, dikalikan 4 untuk mengetahui detak jantung per menit (BPM) dalam kondisi istirahat. Hasil ini dicatat pada kolom 'Resting HR' di LKPD kelompok.</p>
+                <p><b>4. Eksperimen Gerak Singkat & Dialog Reflektif:</b> Guru mengajak seluruh siswa melompat-lompat santai sebanyak 10 kali di tempat, lalu meraba kembali nadinya secara cepat. Guru melontarkan pertanyaan pemantik: <i>“Apakah ketukannya sekarang terasa lebih cepat? Mengapa denyutan nadi kalian berubah setelah melompat tadi? Apa yang sedang dilakukan jantung kalian?”</i> untuk memicu pemahaman mendalam.</p>
+                <p><b>5. Pemanasan Terarah:</b> Melakukan gerakan peregangan statis dan dinamis di tempat masing-masing guna menghindari tabrakan fisik di lapangan yang sempit.</p>
 
-Tugas Detail Setiap Peran: \\line
-- Kelompok Aktif: Melakukan aktivitas fisik di stasiun masing-masing selama 1 menit intensitas sedang, istirahat 30 detik, diulang sebanyak 2 set. \\line
-- Kelompok Pendamping: Berdiri di dekat kelompok aktif. Bertanggung jawab memastikan temannya melakukan gerakan dengan aman (misal: posisi punggung tegak saat squat) dan menyemangati secara positif. \\line
-- Kelompok Analis: Menggunakan stopwatch membantu menginstruksikan kapan harus mulai dan berhenti. Setelah latihan selesai, penganalisis langsung membantu mencari dan menghitung denyut nadi temannya selama 15 detik (kemudian dikali 4 untuk mengetahui detak jantung per menit / BPM). \\line\\line
+                <h3>B. Kegiatan Inti (45 Menit) - Sintak Station Rotation & Action</h3>
+                <p><b>Tahap 1: Pengorganisasian Kelompok & Pembagian Peran (5 Menit)</b></p>
+                <p>Guru membagi siswa ke dalam 6 kelompok (masing-masing 10 siswa). Setiap kelompok menerima LKPD "Laboratorium Jantungku" dan pensil. Guru menjelaskan aturan main "Sirkuit Detak Jantung" di lapangan bulutangkis yang dibagi menjadi 3 stasiun mini:</p>
+                <ul>
+                    <li><b>Stasiun 1 (Sisi Kiri):</b> Agility Shuttle-Run pendek (jarak 5 meter bolak-balik).</li>
+                    <li><b>Stasiun 2 (Tengah):</b> Modified Strength Station (Squat atau push-up dinding/lutut secara periodik).</li>
+                    <li><b>Stasiun 3 (Sisi Kanan):</b> Cardio Jump (Melompat tali tanpa tali / lompat bayangan cepat).</li>
+                </ul>
+                
+                <p><b>Tahap 2: Simulasi dan Rotasi Peran (30 Menit - Deep Learning Action)</b></p>
+                <p>Siklus perputaran kelompok dirancang agar ruang lapangan bulutangkis tetap longgar dan kondusif:</p>
+                <ul>
+                    <li><b>Ronde 1 (8 Menit):</b> Kelompok 1 & 2 (Stasiun 1 & 2) beraktivitas fisik (Ronde Aktif), Kelompok 3 & 4 mendampingi (Peer-Coach), Kelompok 5 & 6 mencatat data nadi (Analis/Data Recorder).</li>
+                    <li><b>Ronde 2 (8 Menit):</b> Kelompok 3 & 4 (Stasiun 2 & 3) beraktivitas fisik (Ronde Aktif), Kelompok 5 & 6 mendampingi (Peer-Coach), Kelompok 1 & 2 mencatat data nadi (Analis/Data Recorder).</li>
+                    <li><b>Ronde 3 (8 Menit):</b> Kelompok 5 & 6 (Stasiun 3 & 1) beraktivitas fisik (Ronde Aktif), Kelompok 1 & 2 mendampingi (Peer-Coach), Kelompok 3 & 4 mencatat data nadi (Analis/Data Recorder).</li>
+                </ul>
+                <p><i>Tugas Detail Setiap Peran:</i></p>
+                <ul>
+                    <li><b>Kelompok Aktif:</b> Melakukan aktivitas fisik di stasiun masing-masing selama 1 menit intensitas sedang, istirahat 30 detik (2 set).</li>
+                    <li><b>Kelompok Pendamping (Peer-Coach):</b> Berdiri di batas stasiun luar. Memastikan temannya melakukan gerakan dengan aman dan menyemangati secara positif.</li>
+                    <li><b>Kelompok Analis (Data Recorder):</b> Memandu waktu dengan stopwatch, mengukur denyut nadi aktif sesaat setelah set latihan selesai selama 15 detik (dikali 4 untuk BPM), lalu mencatat hasilnya secara jujur di kolom LKPD.</li>
+                </ul>
+                
+                <p><b>Tahap 3: Diskusi Kelompok Kecil & Pengonseptualisasian Data (10 Menit)</b></p>
+                <p>Setelah seluruh kelompok merasakan semua peran, masing-masing kelompok berkumpul di area steril luar lapangan (duduk melingkar kecil) untuk mendiskusikan hasil LKPD mereka, menghitung selisih denyut nadi, dan merumuskan analisis kardiorespiratori kelompok.</p>
 
-Tahap 3: Diskusi Kelompok Kecil & Pengonseptualisasian (10 Menit) \\line
-Setelah semua merasakan semua peran, masing-masing kelompok berkumpul di area steril luar lapangan (duduk melingkar kecil) untuk mendiskusikan hasil LKPD mereka. \\line\\line
+                <h3>C. Kegiatan Penutup (10 Menit) - Reflection & Joyful Closing</h3>
+                <p><b>1. Pendinginan (Cooling Down):</b> Dipimpin oleh guru, melakukan gerakan peregangan lambat dengan pengaturan napas yang dalam guna menurunkan detak jantung kembali menuju batas aman istirahat.</p>
+                <p><b>2. Refleksi Mendalam (Deep Learning Reflection):</b> Tanya jawab reflektif kelas terbuka mengenai: <i>"Anak-anak, mengapa hari ini tidak ada yang bertabrakan meskipun lapangan sangat sempit untuk 60 orang?"</i> dan <i>"Mengapa kenaikan denyut nadi yang drastis pasca-latihan justru menjadi indikator jantung kalian bugar?"</i></p>
+                <p><b>3. Apresiasi & Umpan Balik Positif:</b> Guru mengapresiasi tinggi atas kerja sama luar biasa, ketertiban, dan kejujuran pencatatan data 60 siswa sepanjang aktivitas sirkuit.</p>
+                <p><b>4. Doa Penutup & Pembubaran:</b> Berdoa bersama secara khidmat dan berjabat tangan tertib sebelum kembali ke kelas.</p>
 
-{\\b C. Kegiatan Penutup (10 Menit) - Reflection & Joyful \\b0 \\line}
-1. Pendinginan (Cooling Down): Dipimpin oleh guru, melakukan gerakan peregangan lambat dengan pengaturan napas yang dalam. Semua siswa berbaris kembali melingkar. \\line
-2. Refleksi Mendalam (Deep Learning Reflection): \\line
-- "Anak-anak, hari ini lapangan kita sangat sempit, tetapi apakah kalian merasa tetap bisa berkeringat dan belajar banyak hal?" \\line
-- "Siapa yang detak nadinya tadi tembus di atas 120 kali per menit? Apa yang kalian rasakan pada tubuh kalian? Mengapa itu tanda yang baik untuk kesehatan jantung?" \\line
-3. Apresiasi & Umpan Balik Positif: Guru mengapresiasi kerja sama luar biasa dari 60 siswa yang mampu menjaga ketertiban, keselamatan, dan kebersihan selama proses sirkuit latihan di ruang terbatas. \\line
-4. Doa Penutup & Pembubaran: Berdoa bersama dan berjabat tangan tertib sebelum kembali ke kelas. \\line\\line
+                <div class="page-break"></div>
 
-\\page
+                <!-- 5. ASESMEN PEMBELAJARAN -->
+                <h2>5. ASESMEN PEMBELAJARAN</h2>
+                
+                <h3>A. Asesmen Pada Awal Pembelajaran (Asesmen Diagnostik)</h3>
+                <p>Dilakukan sebelum aktivitas fisik dimulai untuk memetakan kondisi kesehatan dan kesiapan pemahaman teknis siswa.</p>
+                <table style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">Kriteria Diagnostik</th>
+                            <th>Deskripsi Penilaian Kesiapan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>Kondisi Fisik Bawaan</b></td>
+                            <td>Guru menanyakan keluhan medis mandiri (seperti sesak napas, asma aktif, pusing kepala, cedera sendi bawaan). Siswa yang memiliki keluhan diposisikan secara aman sebagai analis data utama.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Keterampilan Meraba Nadi</b></td>
+                            <td>Siswa mendemonstrasikan kemampuan mandiri meraba arteri radialis (pergelangan tangan) secara berpasangan dalam durasi di bawah 5 detik.</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-{\\fs24\\b V. ASESMEN PEMBELAJARAN \\b0 \\line}
-{\\b A. Rubrik Asesmen Sikap (Profil Pelajar Pancasila) \\b0 \\line}
-Teknik Penilaian: Observasi Guru & Penilaian Antarteman selama aktivitas kelompok. \\line
-Kriteria Sikap (Gotong Royong): \\line
-- Skor 4 (Sangat Baik): Sangat aktif membantu memantau waktu, memberikan koreksi gerak yang sopan, dan menyemangati rekan satu kelompok tanpa diminta. \\line
-- Skor 3 (Baik): Aktif membantu memantau waktu dan membagikan peran dalam kelompok dengan tertib. \\line
-- Skor 2 (Cukup): Hanya fokus pada tugas diri sendiri dan kurang berinteraksi membantu rekan kelompok. \\line
-- Skor 1 (Perlu Bimbingan): Pasif, tidak peduli dengan pembagian peran, atau mengganggu ketertiban kelompok lain. \\line\\line
-Kriteria Sikap (Mandiri): \\line
-- Skor 4 (Sangat Baik): Menunjukkan tanggung jawab tinggi dalam melakukan gerakan dengan teknik yang benar dan jujur mencatat data denyut nadi sendiri/teman apa adanya. \\line
-- Skor 3 (Baik): Melakukan tugas gerak secara mandiri dan mencatat data denyut nadi dengan bantuan minimal dari guru. \\line
-- Skor 2 (Cukup): Melakukan gerakan secara asal-asalan dan membutuhkan pengawasan ketat agar mau mencatat data. \\line
-- Skor 1 (Perlu Bimbingan): Tidak bersedia melakukan aktivitas fisik atau tidak mau berpartisipasi mengisi data kebugaran. \\line\\line
+                <h3>B. Asesmen Pada Proses Pembelajaran (Asesmen Formatif)</h3>
+                <p>Rubrik Asesmen Sikap (Profil Pelajar Pancasila): Gotong Royong dan Mandiri.</p>
+                <table style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th style="width: 20%;">Kriteria Sikap</th>
+                            <th style="width: 26%;">Skor 4 (Sangat Baik)</th>
+                            <th style="width: 26%;">Skor 3 (Baik)</th>
+                            <th>Skor 1 (Perlu Bimbingan)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>Gotong Royong</b></td>
+                            <td>Sangat aktif membantu memantau waktu, memberikan koreksi gerak yang sopan, dan menyemangati rekan satu kelompok tanpa diminta.</td>
+                            <td>Aktif membantu memantau waktu dan membagikan peran dalam kelompok dengan tertib.</td>
+                            <td>Pasif, tidak peduli dengan pembagian peran, atau mengganggu ketertiban kelompok lain.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Mandiri</b></td>
+                            <td>Menunjukkan tanggung jawab tinggi dalam melakukan gerakan dengan teknik yang benar dan jujur mencatat data denyut nadi sendiri/teman apa adanya.</td>
+                            <td>Melakukan tugas gerak secara mandiri dan mencatat data denyut nadi dengan bantuan minimal dari guru.</td>
+                            <td>Tidak bersedia melakukan aktivitas fisik atau tidak mau berpartisipasi mengisi data kebugaran.</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-{\\b B. Rubrik Asesmen Pengetahuan (Kognitif - Deep Learning) \\b0 \\line}
-Teknik Penilaian: Penilaian LKPD Kelompok (Lembar Kerja Diskusi Mendalam). \\line
-Indikator (Analisis Hubungan Aktivitas & Denyut Nadi): \\line
-- Skor 4: Mampu menjelaskan secara ilmiah dan logis hubungan peningkatan intensitas gerakan dengan meningkatnya detak jantung sebagai suplai oksigen. \\line
-- Skor 3: Mampu menjelaskan bahwa gerakan yang cepat membuat detak jantung naik, namun penjelasan biologisnya belum lengkap. \\line
-- Skor 2: Hanya mampu menyebutkan bahwa detak jantung menjadi lebih cepat setelah olahraga tanpa tahu alasannya. \\line
-- Skor 1: Tidak dapat menjelaskan hubungan antara aktivitas fisik dengan perubahan denyut nadi. \\line\\line
-Indikator (Konseptualisasi Kebugaran Nyata): \\line
-- Skor 4: Mampu menguraikan minimal 3 manfaat konkret menjaga kesehatan jantung-paru dalam kehidupan sehari-hari (misal: belajar konsentrasi, tidak mudah lelah). \\line
-- Skor 3: Mampu menyebutkan 2 manfaat nyata kesehatan jantung-paru bagi aktivitas sehari-hari di rumah/sekolah. \\line
-- Skor 2: Hanya mampu menyebutkan 1 manfaat umum seperti "agar tubuh sehat saja". \\line
-- Skor 1: Tidak mampu menyebutkan manfaat kebugaran jantung bagi kehidupan sehari-hari. \\line\\line
+                <h3>C. Asesmen Pada Akhir Pembelajaran (Asesmen Sumatif / Kognitif)</h3>
+                <p>Rubrik Asesmen Pengetahuan (Kognitif) & Keterampilan (Psikomotor) secara mendetail.</p>
+                <table style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th style="width: 20%;">Aspek Kriteria</th>
+                            <th style="width: 26%;">Skor 4 (Sangat Baik)</th>
+                            <th style="width: 26%;">Skor 3 (Baik)</th>
+                            <th>Skor 1 (Perlu Bimbingan)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>Analisis Kardiovaskular</b></td>
+                            <td>${appData.rubrikS4Aspek1}</td>
+                            <td>${appData.rubrikS3Aspek1}</td>
+                            <td>${appData.rubrikS1Aspek1}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Keterampilan Gerak</b></td>
+                            <td>${appData.rubrikS4Aspek2}</td>
+                            <td>${appData.rubrikS3Aspek2}</td>
+                            <td>${appData.rubrikS1Aspek2}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><b>Ketetapan Kelulusan Belajar:</b> Jika siswa memperoleh Nilai Akhir (Skor Gabungan / 12) * 100 dengan hasil <b>>= 75.00</b> (Memenuhi KKTP).</p>
 
-{\\b C. Rubrik Asesmen Keterampilan (Psikomotor) \\b0 \\line}
-Teknik Penilaian: Unjuk Kerja Praktik Gerak Terbimbing di Lapangan Sempit. \\line
-Kriteria (Teknik Gerak Aman: Shuttle-Run, Squat, Lompat): \\line
-- Skor 4: Melakukan seluruh gerakan dengan teknik postur tubuh tegak, pendaratan kaki lembut, menjaga keseimbangan, dan tidak berisiko cedera. \\line
-- Skor 3: Melakukan gerakan dengan teknik yang benar, namun sesekali kehilangan keseimbangan saat melakukan rotasi cepat. \\line
-- Skor 2: Melakukan gerakan dengan postur yang kurang tepat (misal: punggung terlalu membungkuk saat squat) sehingga berisiko cedera. \\line
-- Skor 1: Gerakan tidak sesuai instruksi teknik dasar dan membahayakan keselamatan diri sendiri atau orang lain. \\line\\line
-Kriteria (Pemanfaatan Ruang Terbatas): \\line
-- Skor 4: Sangat disiplin menjaga posisi gerak di dalam garis batas stasiun masing-masing tanpa menyenggol teman di sekitarnya. \\line
-- Skor 3: Bergerak dengan aktif, namun sesekali melewati batas stasiun tanpa sengaja menyentuh teman. \\line
-- Skor 2: Sering keluar dari batas stasiun latihan sehingga mengganggu kelancaran kelompok yang lain. \\line
-- Skor 1: Tidak memperdulikan ruang gerak stasiun, berlari sembarangan, dan membentur teman lain. \\line\\line
+                <div class="page-break"></div>
 
-{\\fs24\\b VI. REMEDIAL & PENGAYAAN \\b0 \\line}
-1. Remedial: Diberikan kepada peserta didik yang belum mencapai KKTP (terutama pada aspek teknik gerak yang aman). Guru memberikan bimbingan khusus melatih gerakan squat atau shuttle-run dengan tempo yang lebih lambat secara individual di pinggir lapangan. \\line
-2. Pengayaan: Diberikan kepada peserta didik yang telah melampaui KKTP. Mereka ditugaskan menjadi mentor/asisten guru untuk mendampingi teman yang masih kesulitan, atau ditantang untuk menghitung denyut nadi target latihan secara lebih kompleks. \\line}
-            `;
+                <!-- IX. LAMPIRAN LKPD -->
+                <h2>IX. LAMPIRAN: LEMBAR KERJA PESERTA DIDIK (LKPD)</h2>
+                <div style="border: 2px dashed #000000; padding: 15px; margin-top: 10px;">
+                    <p style="text-align: center; font-weight: bold; font-size: 12pt; margin-top: 0;">LABORATORIUM JANTUNGKU</p>
+                    <p><b>Kelompok:</b> ........................................ <span style="float: right;"><b>Kelas:</b> V (Lima)</span></p>
+                    <p><b>Nama Anggota Kelompok:</b></p>
+                    <p>1. ........................................ 3. ........................................ 5. ........................................</p>
+                    <p>2. ........................................ 4. ........................................ 6. ........................................</p>
+                    
+                    <p><b>Tabel Rekapitulasi Data Denyut Nadi:</b></p>
+                    <table style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th style="width: 10%;">No</th>
+                                <th>Nama Siswa</th>
+                                <th>Nadi Sebelum (Resting HR)</th>
+                                <th>Nadi Setelah (Active HR)</th>
+                                <th>Selisih (BPM)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>2</td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>3</td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>4</td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>5</td><td></td><td></td><td></td><td></td></tr>
+                        </tbody>
+                    </table>
 
-            const blob = new Blob([rtfContent], { type: 'application/rtf' });
+                    <p><b>Pertanyaan Evaluasi & Diskusi:</b></p>
+                    <p>1. Mengapa terjadi lonjakan denyut nadi yang berbeda secara signifikan saat siswa berada dalam kondisi istirahat dibandingkan sesaat setelah menyelesaikan rangkaian gerakan sirkuit?</p>
+                    <p><i>Jawab: ....................................................................................................................................................................</i></p>
+                    <p>2. Berdasarkan hasil analisis data kelompok kalian, bagaimana kaitan antara kebugaran daya tahan jantung dengan aktivitas fisik harian kita di rumah maupun sekolah?</p>
+                    <p><i>Jawab: ....................................................................................................................................................................</i></p>
+                </div>
+
+                <div class="page-break"></div>
+
+                <!-- X. LEMBAR PENGESAHAN -->
+                <h2>X. LEMBAR PENGESAHAN DOKUMEN</h2>
+                <br><br>
+                <table style="width: 100%; border: none;" class="meta-table">
+                    <tr>
+                        <td style="width: 50%; border: none;">
+                            Mengetahui,<br>
+                            Kepala SD Negeri 8 Banjar Anyar<br><br><br><br><br>
+                            <b><u>Made Arcita, S.Pd., M.Pd.</u></b><br>
+                            NIP. 19780512 200501 1 008
+                        </td>
+                        <td style="width: 50%; border: none;">
+                            Kediri, Tabanan, ____________ 2026<br>
+                            Guru PJOK Kelas V,<br><br><br><br><br>
+                            <b><u>Gede Ardy Putrawan, S.Pd.</u></b><br>
+                            NIP. 19931015 201903 1 012
+                        </td>
+                    </tr>
+                </table>
+
+            </body>
+            </html>`;
+
+            // HTML Blob configured specifically for MS Word (.doc) MIME type
+            const blob = new Blob(['\ufeff' + sourceHTML], {
+                type: 'application/msword;charset=utf-8'
+            });
+
+            // Trigger download
             const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
+            const a = document.createElement("a");
             a.href = url;
-            a.download = 'Modul_Ajar_PJOK_Kebugaran_Jasmani.rtf';
+            
+            const cleanFilename = appData.materi.replace(/[^a-zA-Z0-9]/g, "_");
+            a.download = `Modul_Ajar_PJOK_${cleanFilename}_SDN8.doc`;
+            
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
@@ -1200,3 +1535,4 @@ Kriteria (Pemanfaatan Ruang Terbatas): \\line
     </script>
 </body>
 </html>
+
